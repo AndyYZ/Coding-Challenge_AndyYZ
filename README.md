@@ -24,18 +24,16 @@ Two features are implemented for the analysis of tweets:
 
       <number of tweets that had unicode> tweets contained unicode.
 The task with implementation of feature one is completed.  
+
+
 2. Calculate the average degree of a vertex in a Twitter hashtag graph for the last 60 seconds, and update this each time a new tweet appears.
 
-Here, we have to define a few concepts (though there will be examples below to clarify):
-
-- A tweet's text is considered "clean" once all of the escape characters (e.g. \n, \", \/ ) are replaced and unicode have been removed.
-- A Twitter hashtag graph is a graph connecting all the hashtags that have been mentioned together in a single tweet.
-
-
-# Coding-Challenge_AndyYZ
-Coding Challenge for Insight Data Engineering Program
-
-Test
-
-
+  A HashTagGraph class is constructed to implment this second feature. The HashTagGraph class represents an undirected dynamic graph. Its vertices are named after hashtags extracted from JSON files of twitter. For each edge in the graph, an edge field is created to store its two ends' names and a time field is created to record when it is added to the graph or updated. 
+  Each time a new tweet comes in, the HashTageGraph is updated:
+  	(a) For each edge formed by the hashtages in the latest tweet, if it is not present in the current graph, this edge and the time it is formed are added; if it is already present in the graph, simply update the time field associated the edge. No weight is assgined to the edges in the hashtag graph.  
+  	(b) For those edges added or updated more than 60 seconds ago by the time a new tweet comes in, they will be removed.
+  	
+  	
+  	
+  
 
