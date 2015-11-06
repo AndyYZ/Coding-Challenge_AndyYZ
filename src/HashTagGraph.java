@@ -150,9 +150,9 @@ public class HashTagGraph {
 	
 	
 	/**
-	 * @param   vertex the vertex whose degree is returned
-	 * @return  the degree of this vertex. If the vertex is not present in
-	 *          the graph, return -1
+	 * @param   vertex  the vertex whose degree is returned
+	 * @return          the degree of this vertex. If the vertex is not 
+	 *                  present in the graph, throw NullPointerException
 	 */
 	public int getDegree(String vertex) {
 		Integer degree = vertexMap.get(vertex);
