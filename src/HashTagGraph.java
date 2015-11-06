@@ -379,7 +379,7 @@ public class HashTagGraph {
 		Date[] sd = new Date[7];
 		SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy");
 		try {
-			sd[0] = format.parse("Thu Oct 29 12:51:01 CDT 2015");
+			sd[0] = format.parse("Thu Oct 29 12:51:01 +0000 2015");
 			sd[1] = format.parse("Thu Oct 29 17:51:30 +0000 2015");
 			sd[2] = format.parse("Thu Oct 29 17:51:55 +0000 2015");
 			sd[3] = format.parse("Thu Oct 29 17:51:56 +0000 2015");
